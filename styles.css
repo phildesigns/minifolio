@@ -1,0 +1,102 @@
+:root {
+    --gutter: 4rem;
+    --white: white;
+}
+
+body {
+    background: url(src/bgn1.jpg) bottom no-repeat fixed;
+    border: solid 1px var(--white);
+}
+
+body,
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+body * {
+    font-family: "Inter", system-ui, sans-serif;
+    font-weight: 300;
+    text-transform: uppercase;
+    color: var(--white)
+}
+
+h1 {
+    font-size: 2em;
+    margin: 0;
+}
+
+b {
+    font-weight: 500;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav ul {
+    margin: 0 1em;
+    display: flex;
+    align-items: center;
+}
+
+nav a {
+    margin: 0 1em;
+    font-weight: 900;
+    font-style: italic;
+    font-size: 1.5em;
+}
+
+nav li {
+    margin: 1em;
+}
+
+ul {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    list-style: none;
+}
+
+.blank {
+    width: var(--gutter);
+    height: var(--gutter);
+    color: rgba(0, 0, 0, 0);
+    outline: solid 1px var(--white);
+}
+
+.central {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: calc(100vh - var(--gutter) * 2);
+    outline: solid 1px var(--white);
+    outline-offset: -0.5px;
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+}
+
+.ctr {
+    width: 100%;
+    height: var(--gutter);
+    outline: none;
+}
+
+.side {
+    height: calc(100vh - var(--gutter) * 2);
+    outline: none;
+}
+
+.line {
+    width: 100vw;
+    display: flex;
+}
+
+@media only screen and (max-width: 768px) {
+    :root {
+        --gutter: 2rem;
+    }
+}
